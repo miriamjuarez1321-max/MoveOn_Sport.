@@ -1,0 +1,151 @@
+:root{
+    --green:#1f5f3b;
+    --dark:#0f0f0f;
+    --light:#ffffff;
+    --gray:#f6f6f6;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+body{
+    background:#fff;
+    color:#111;
+}
+
+/* HERO */
+.collection-hero{
+    text-align:center;
+    padding:6rem 5% 3rem;
+}
+
+.collection-hero h1{
+    font-size:3rem;
+    font-weight:700;
+}
+
+.collection-hero p{
+    max-width:650px;
+    margin:1rem auto 2rem;
+    color:#555;
+}
+
+.filters{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:.8rem;
+}
+
+.filters a, .filters button{
+    padding:.6rem 1.4rem;
+    border-radius:30px;
+    border:1px solid #ddd;
+    background:#fff;
+    cursor:pointer;
+    font-size:.85rem;
+    text-decoration: none;
+    color: #333;
+    display: inline-block;
+}
+
+.filters .active{
+    background:var(--green) !important;
+    color:#fff !important;
+    border:none;
+}
+
+/* PRODUCTS */
+.products-section{
+    padding:2rem 5% 5rem;
+}
+
+.products-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:2rem;
+}
+
+/* Reusable card styles moved to home.css */
+
+/* CARD BODY */
+.card-body{
+    padding:1.2rem 1.2rem 1.5rem;
+}
+
+.card-body small{
+    color:#777;
+    font-size:.7rem;
+    letter-spacing:1px;
+}
+
+.card-body h3{
+    font-size:1rem;
+    margin:.3rem 0;
+}
+
+.card-body p{
+    font-size:.8rem;
+    color:#666;
+}
+
+.price{
+    font-weight:700;
+    font-size:1.1rem;
+    margin:.6rem 0;
+    color:var(--green);
+}
+
+.sizes{
+    display:flex;
+    gap:.4rem;
+    flex-wrap:wrap;
+    margin:.6rem 0;
+}
+
+.sizes span{
+    background:#f0f5f2;
+    color:var(--green);
+    font-size:.7rem;
+    padding:.3rem .6rem;
+    border-radius:8px;
+}
+
+/* BUTTON */
+.cart-btn{
+    margin-top:.8rem;
+    width:100%;
+    padding:.8rem;
+    background:var(--green);
+    color:#fff;
+    border:none;
+    border-radius:12px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.cart-btn:hover{
+    background:#17472c;
+}
+
+/* RESPONSIVE */
+@media(max-width:1100px){
+    .products-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media(max-width:600px){
+    .products-grid{
+        grid-template-columns:1fr;
+    }
+
+    .collection-hero h1{
+        font-size:2.2rem;
+    }
+}
